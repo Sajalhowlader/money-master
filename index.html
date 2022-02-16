@@ -23,12 +23,12 @@
     <main class="container">
         <div class="row">
             <div class="col-12 col-md-6">
-                <img src="./images/money-3.jpeg" alt="">
+                <img class="img-fluid" src="./images/money-3.jpeg" alt="">
             </div>
             <div class="col-12 col-md-6">
                 <div class="text-center">
                     <h3 class="fw-bold text-center"> Incom</h3>
-                    <input class="  w-50 mx-auto input-color" type="number" value="15000">
+                    <input id="income" class="  w-50 mx-auto input-color" type="number" value="15000">
 
                     <h3 class="fw-bold text-center mt-5"> Expense</h3>
 
@@ -45,7 +45,8 @@
                     <button id="calculate-btn" type="button" class="btn btn-primary btn-lg mt-4 px-5">Calculate</button>
 
                     <h5>Total Expense : <span id="total-expense">00</span></h5>
-                    <h5>Total Blance : <span>00</span></h5>
+
+                    <h5>Total Blance : <span id="total-blance">00</span></h5>
 
                     <strong>Save :</strong> <input class="save-input" type="number" value="20"> <strong> % </strong>
                     <button type="button" class="btn btn-primary ms-4">Save</button>
