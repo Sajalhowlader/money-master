@@ -1,18 +1,14 @@
 // Incone input an income value
 const income = document.getElementById('income')
-const totalIncome = income.value;
 
 // house rent input and house rent value
 const houseRent = document.getElementById('house-input');
-const houseRentValue = houseRent.value;
 
 // food rent input and food rent value
 const foodRent = document.getElementById('food-input')
-const foodRentValue = foodRent.value
 
 // others rent value and others rent input
 const othersRent = document.getElementById('others-input');
-const othersRentvalue = othersRent.value;
 
 // total expense 
 const expense = document.getElementById('total-expense')
@@ -21,7 +17,8 @@ const expense = document.getElementById('total-expense')
 const blance = document.getElementById('total-blance')
 
 // save money input field
-const saveInput = document.getElementById('save-input').value
+const saveInput = document.getElementById('save-input')
+
 // saveing amount inner text
 const saveingAmount = document.getElementById('saveing-amount')
 
@@ -29,32 +26,47 @@ const saveingAmount = document.getElementById('saveing-amount')
 const remaining = document.getElementById('remaining-blance')
 
 
-
-
-
-
-
-
 document.getElementById('calculate-btn').addEventListener('click', function () {
-    const totalExpense = parseFloat(houseRentValue) + parseFloat(foodRentValue) + parseFloat(othersRentvalue);
 
-    expense.innerText = totalExpense
+    if (income.value > 0 && houseRent.value >= 0 && foodRent.value >= 0 && othersRent.value >= 0) {
+        const totalExpense = parseFloat(houseRent.value) + parseFloat(foodRent.value) + parseFloat(othersRent.value);
 
-    const totalBlance = parseFloat(totalIncome) - parseFloat(totalExpense)
-    blance.innerText = totalBlance
+        expense.innerText = totalExpense
+
+        const totalBlance = parseFloat(income.value) - parseFloat(totalExpense)
+
+        blance.innerText = totalBlance
+    } else {
+        document.getElementById('denger').style.display = "block"
+    }
+
 
 })
 
 document.getElementById('save-btn').addEventListener('click', function () {
+    const totalExpense = parseFloat(houseRent.value) + parseFloat(foodRent.value) + parseFloat(othersRent.value);
+    const totalBlance = parseFloat(income.value) - parseFloat(totalExpense)
+    console.log(totalBlance)
 
+    if (totalBlance > saveingAmount.innerText) {
 
-    const saveMoney = (totalIncome * saveInput) / 100;
-    saveingAmount.innerText = saveMoney;
+        const saveMoney = (income.value * saveInput.value) / 100;
+        saveingAmount.innerText = saveMoney;
 
-    const remainingBlance = parseFloat(blance.innerText) - parseFloat(saveMoney)
+        const remainingBlance = parseFloat(blance.innerText) - parseFloat(saveMoney)
 
-    remaining.innerText = remainingBlance
+        remaining.innerText = remainingBlance
 
+    } else {
+
+    }
 
 
 })
+
+// function clickBtn(clickId) {
+//     document.getElementById().addEventListener('click', function () {
+
+
+//     })
+// }
