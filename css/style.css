@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 .background-style{
-    background-color: #050926db;
+    background-color: #030514db;
 }
 .icon-color{
     color: #ff5200;
@@ -16,7 +16,7 @@
 .input-color {
     background-color: #d9d9d9;
     border: none;
-    padding: 5px 16px;
+    padding: 3px 16px;
     outline: none;
     font-size: 18px;
     font-weight: bold;
