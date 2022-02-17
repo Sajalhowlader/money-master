@@ -25,21 +25,21 @@ const saveingAmount = document.getElementById('saveing-amount')
 // remaining blance after total cost and saveing
 const remaining = document.getElementById('remaining-blance')
 
-function totalIncome(first, second) {
-    const restult = parseFloat(first) - parseFloat(second)
-    return restult;
-}
-function totalCost(firstone, secondone, thirdone) {
-    secondresult = parseFloat(firstone) + parseFloat(secondone) + parseFloat(thirdone)
+// total income function
+function totalCost(house, food, others) {
+    secondresult = parseFloat(house) + parseFloat(food) + parseFloat(others)
     return secondresult;
 }
-
+// total cost function
+function totalIncome(income, cost) {
+    const restult = parseFloat(income) - parseFloat(cost)
+    return restult;
+}
 
 
 
 document.getElementById('calculate-btn').addEventListener('click', function () {
     //  sum in total cost house rent foodrent and others
-    // const totalExpense = parseFloat(houseRent.value) + parseFloat(foodRent.value) + parseFloat(othersRent.value);
     const totalExpense = totalCost(houseRent.value, foodRent.value, othersRent.value)
 
 
@@ -53,9 +53,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
         expense.innerText = totalExpense
         // total blance >> income - expense
-        // const totalBlance = parseFloat(income.value) - parseFloat(totalExpense)
         const totalBlance = totalIncome(income.value, totalExpense)
-
 
         blance.innerText = totalBlance
 
@@ -68,10 +66,8 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
 document.getElementById('save-btn').addEventListener('click', function () {
 
-    // const totalExpense = parseFloat(houseRent.value) + parseFloat(foodRent.value) + parseFloat(othersRent.value);
     const totalExpense = totalCost(houseRent.value, foodRent.value, othersRent.value)
 
-    // const totalBlance = parseFloat(income.value) - parseFloat(totalExpense)
     const totalBlance = totalIncome(income.value, totalExpense)
 
 
@@ -91,6 +87,5 @@ document.getElementById('save-btn').addEventListener('click', function () {
 
 
 })
-// total expense
-// total blance
+
 

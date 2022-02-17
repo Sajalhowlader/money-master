@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.background-style{
+    background-color: #050926db;
+}
 .icon-color{
     color: #ff5200;
     font-size: 23px;

@@ -17,27 +17,30 @@
 
 <body>
     <!-- hearder part -->
-    <header class=" container text-center mb-5"> <i class="fa-solid fa-piggy-bank icon-color"></i>
+    <header class=" container text-center mb-2"> <i class="fa-solid fa-piggy-bank icon-color"></i>
         <h1 class=" fw-bold text-uppercase d-inline ">Moneyfy</h1><i class="fa-solid fa-piggy-bank icon-color"></i>
+        <hr>
     </header>
     <!-- main part -->
     <main class="container">
         <div class="row">
+            <!-- first part -->
             <div class="col-12 col-md-6">
-                <img class="img-fluid" src="./images/money-3.jpeg" alt="">
+                <img class="img-fluid" src="./images/money-4.jpeg" alt="">
             </div>
+            <!-- second part -->
             <div class="col-12 col-md-6">
-                <div class="text-center">
-                    <h3 class="fw-bold text-center"> Incom</h3>
+                <div class="text-center background-style">
+                    <h3 class="fw-bold text-center fs-4 text-white"> Income</h3>
                     <input id="income" class="  w-50 mb-2 mx-auto input-color" type="number" value="0">
                     <h6 id="denger" class="text-danger ">please give a positive value</h6>
-                    <h3 class="fw-bold text-center "> Expense</h3>
+                    <h3 class="fw-bold text-center fs-4 text-white "> Expense</h3>
 
-                    <strong class="d-block">House Rent</strong><input id="house-input"
-                        class="input-color mb-4 w-50 mx-auto" type="number" value="0">
-                    <br>
+                    <strong class="d-block">House Rent</strong><input id="house-input" class="input-color  w-50 mx-auto"
+                        type="number" value="0">
+
                     <strong class="d-block">Food Bill</strong><input id="food-input"
-                        class="input-color mb-4 w-50 mx-auto" type="number" value="0">
+                        class="input-color mb-2 w-50 mx-auto" type="number" value="0">
                     <br>
                     <strong class="d-block">Others</strong> <input id="others-input"
                         class="input-color w-50 mx-auto border-0 btn-outline-none" type="
@@ -51,7 +54,7 @@
 
                     <h5>Total Blance : <span id="total-blance">00</span></h5>
 
-                    <strong>Save :</strong> <input id="save-input" class="save-input" type="number" value=""> <strong>
+                    <strong>Save :</strong> <input id="save-input" class="save-input" type="number" value="0"> <strong>
                         % </strong>
                     <button id="save-btn" type="button" class="btn btn-primary ms-4">Save</button>
                     <h6 id="no-amount" class="text-danger ">you have no suficiate amount</h6>
