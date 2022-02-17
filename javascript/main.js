@@ -69,7 +69,7 @@ document.getElementById('save-btn').addEventListener('click', function () {
     const totalBlance = totalIncome(income.value, totalExpense)
 
     const saveMoney = (income.value * saveInput.value) / 100;
-    console.log(saveMoney)
+
     if (totalBlance < saveMoney) {
         document.getElementById('no-amount').style.display = "block"
 
