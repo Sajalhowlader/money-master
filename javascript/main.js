@@ -36,8 +36,6 @@ function totalIncome(income, cost) {
     return restult;
 }
 
-
-
 document.getElementById('calculate-btn').addEventListener('click', function () {
     //  sum in total cost house rent foodrent and others
     const totalExpense = totalCost(houseRent.value, foodRent.value, othersRent.value)
@@ -70,21 +68,19 @@ document.getElementById('save-btn').addEventListener('click', function () {
 
     const totalBlance = totalIncome(income.value, totalExpense)
 
+    const saveMoney = (income.value * saveInput.value) / 100;
+    console.log(saveMoney)
+    if (totalBlance < saveMoney) {
+        document.getElementById('no-amount').style.display = "block"
 
-    if (totalBlance > saveingAmount.innerText) {
-
-        const saveMoney = (income.value * saveInput.value) / 100;
+    } else {
 
         saveingAmount.innerText = saveMoney;
 
         const remainingBlance = parseFloat(blance.innerText) - parseFloat(saveMoney)
 
         remaining.innerText = remainingBlance
-
-    } else {
-        document.getElementById('no-amount').style.display = "block"
     }
-
 
 })
 
