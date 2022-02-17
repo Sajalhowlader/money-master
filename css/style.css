@@ -26,6 +26,6 @@
     background-color: #d9d9d9;
     font-weight: bold;
     margin-right: 15px; }
-#denger{
+#denger, #no-amount, #expense{
     display: none;
 }
