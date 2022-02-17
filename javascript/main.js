@@ -1,36 +1,60 @@
+// Incone input an income value
+const income = document.getElementById('income')
+const totalIncome = income.value;
+
+// house rent input and house rent value
+const houseRent = document.getElementById('house-input');
+const houseRentValue = houseRent.value;
+
+// food rent input and food rent value
+const foodRent = document.getElementById('food-input')
+const foodRentValue = foodRent.value
+
+// others rent value and others rent input
+const othersRent = document.getElementById('others-input');
+const othersRentvalue = othersRent.value;
+
+// total expense 
+const expense = document.getElementById('total-expense')
+
+// total blance after total cost
+const blance = document.getElementById('total-blance')
+
+// save money input field
+const saveInput = document.getElementById('save-input').value
+// saveing amount inner text
+const saveingAmount = document.getElementById('saveing-amount')
+
+// remaining blance after total cost and saveing
+const remaining = document.getElementById('remaining-blance')
+
+
+
+
+
+
+
+
 document.getElementById('calculate-btn').addEventListener('click', function () {
-    const houseRent = document.getElementById('house-input').value;
-    const foodRent = document.getElementById('food-input').value;
-    const othersRent = document.getElementById('others-input').value;
-    // intotal expense price house food and others
-    const totalExpensePrice = parseFloat(houseRent) + parseFloat(foodRent) + parseFloat(othersRent)
+    const totalExpense = parseFloat(houseRentValue) + parseFloat(foodRentValue) + parseFloat(othersRentvalue);
 
-    const totalPrice = document.getElementById('total-expense')
-    totalPrice.innerText = totalExpensePrice;
-    const income = document.getElementById('income')
+    expense.innerText = totalExpense
 
-    const incomeTotal = income.value;
-    // blance total net income minus total expense
-    const blanceTotal = parseFloat(incomeTotal) - parseFloat(totalExpensePrice)
-
-    const totalBlance = document.getElementById('total-blance')
-    totalBlance.innerText = blanceTotal;
-
-
+    const totalBlance = parseFloat(totalIncome) - parseFloat(totalExpense)
+    blance.innerText = totalBlance
 
 })
 
 document.getElementById('save-btn').addEventListener('click', function () {
-    const saveInput = document.getElementById('save-input').value
-    const income = document.getElementById('income').value
-    const saveMoney = (income * saveInput) / 100
-    const saveingAmount = document.getElementById('saveing-amount')
+
+
+    const saveMoney = (totalIncome * saveInput) / 100;
     saveingAmount.innerText = saveMoney;
 
-    const totalBlance = document.getElementById('total-blance').innerText
-    const remaingMoney = totalBlance - saveMoney;
-    const setRemainingMoney = document.getElementById('remaining-blance')
-    setRemainingMoney.innerText = remaingMoney
+    const remainingBlance = parseFloat(blance.innerText) - parseFloat(saveMoney)
+
+    remaining.innerText = remainingBlance
+
 
 
 })
